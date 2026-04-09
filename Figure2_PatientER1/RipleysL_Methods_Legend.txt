@@ -1,0 +1,41 @@
+METHODS
+=======
+
+Ripley's L Spatial Analysis
+
+To quantify changes in T cell spatial aggregation between biopsies, we applied
+Ripley's L function, a second-order spatial statistic that measures the degree
+of clustering or dispersion of a point pattern relative to complete spatial
+randomness (CSR). For a point process with intensity lambda, Ripley's K function
+K(r) estimates the expected number of additional points within distance r of a
+typical point, normalized by lambda. The L function is a variance-stabilizing
+transformation of K defined as L(r) = sqrt(K(r)/pi), and we report the centered
+form L(r) - r, where values above zero indicate spatial clustering and values
+below zero indicate dispersion relative to CSR.
+
+T cells were identified independently from two modalities: (1) RNA-based cell
+type annotation using label transfer from a breast cancer reference atlas, and
+(2) protein-based identification using CosMx protein CD3 expression intensity,
+with T cells defined as cells exceeding the per-slide 95th percentile of CD3
+signal. For each biopsy, T cell coordinates were converted to micrometers
+(0.18 um/pixel for RNA; slide coordinates in mm for protein) and modeled as a
+spatial point pattern within a rectangular observation window. The L function
+was estimated using Ripley's isotropic edge correction, and 95% simulation
+envelopes were generated from 99 Monte Carlo simulations of CSR, implemented
+using the spatstat R package (v3.5). The analysis was evaluated over distances
+from 0 to 1,000 um.
+
+
+FIGURE LEGEND
+=============
+
+Ripley's L function analysis of T cell spatial clustering in Patient ER 1.
+L(r) - r is plotted as a function of distance r for Bx2 (blue) and Bx4 (red),
+with T cells identified from RNA-based cell type annotation (left) and CosMx
+CD3 protein expression (right; top 5% per slide). Values above the dashed line
+(L(r) - r = 0) indicate spatial clustering beyond complete spatial randomness;
+shaded bands represent 95% simulation envelopes (99 Monte Carlo simulations).
+Both modalities demonstrate substantially reduced T cell clustering in the
+resistant biopsy (Bx4) compared to baseline (Bx2), consistent with dispersal
+of T cells from organized immune structures. RNA: Bx2 n = 902, Bx4 n = 907
+T cells; Protein (CD3+): Bx2 n = 2,444, Bx4 n = 2,278 cells.
