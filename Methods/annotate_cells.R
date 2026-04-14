@@ -5,7 +5,7 @@ library(Signac)
 
 SO <- readRDS("../cosmx_masterSO.rds")
 
-anno_SO <- readRDS(annotation_object) # The annotation object could not be included at this time but is based on the annotation signatures from Gray et al (2025)
+anno_SO <- readRDS(annotation_object) # The annotation object could not be included at this time but is based on the annotation signatures from Gray et al (2025) and Kumar et al (2023)
 
 DefaultAssay(anno_SO) <- "RNA"
 
