@@ -14,8 +14,8 @@ library(circlize)
 # 1. LOAD DATA
 # -----------------------------------------------------------------------------
 cat("Loading data...\n")
-seurat_obj <- readRDS("~/Desktop/Spatial CosmX project/code_of_publication/data/CosMx_SMMART_345k_clean.rds")
-lr_pairs <- read.csv("~/Topic_UMAP_Publication/LR_Analysis/CosMx_Panel_LR_Pairs.csv", stringsAsFactors = FALSE)
+seurat_obj <- readRDS("data/CosMx_SMMART_345k_clean.rds")
+lr_pairs <- read.csv("supplementary_input_data/LR_Scores/CosMx_Panel_LR_Pairs.csv", stringsAsFactors = FALSE)
 
 meta <- seurat_obj@meta.data %>% mutate(cell_id = rownames(seurat_obj@meta.data))
 expr_matrix <- GetAssayData(seurat_obj, layer = "data")
@@ -181,7 +181,7 @@ cat("  Decreased:", sum(filtered_changes$Direction == "Decreased"), "\n")
 # -----------------------------------------------------------------------------
 # 6. OUTPUT DIRECTORY
 # -----------------------------------------------------------------------------
-output_dir <- "~/Topic_UMAP_Publication/LR_Analysis/PatientD_Analysis/LR_Supplemental/"
+output_dir <- "LR_Analysis/PatientD_Analysis/LR_Supplemental/"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 # =============================================================================

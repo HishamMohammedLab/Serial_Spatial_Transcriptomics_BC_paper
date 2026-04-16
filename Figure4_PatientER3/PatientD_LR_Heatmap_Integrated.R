@@ -298,7 +298,7 @@ heatmap_data <- heatmap_data %>%
 # -----------------------------------------------------------------------------
 cat("\nCreating heatmap...\n")
 
-output_dir <- "~/Topic_UMAP_Publication/LR_Analysis/PatientD_Analysis/LR_Temporal_Bx1_Bx3/"
+output_dir <- "LR_Analysis/PatientD_Analysis/LR_Temporal_Bx1_Bx3/"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 # Direction annotation bar

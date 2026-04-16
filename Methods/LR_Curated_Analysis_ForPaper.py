@@ -92,7 +92,7 @@ PATIENT_CONFIG = {
 # =============================================================================
 
 print("Loading L-R scores...")
-scores_df = pd.read_csv(DATA_PATH / "LR_Scores_AllPatients_AllTimepoints.csv")
+scores_df = pd.read_csv(DATA_PATH / "LR_Scores_AllPatients_allTimepoints.csv")
 scores_df['Patient'] = scores_df['Patient'].str.replace('Patient_', '')
 print(f"  {len(scores_df)} score entries across {scores_df['Patient'].nunique()} patients")
 

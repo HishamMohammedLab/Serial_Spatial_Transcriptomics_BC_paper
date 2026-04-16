@@ -265,7 +265,7 @@ consistent_analysis <- fc_results %>%
 # 7. Save Results
 # =============================================================================
 
-output_dir <- "~/Desktop/Spatial CosmX project/Additional existing results/Temporal_AllPatients/"
+output_dir <- "Temporal_AllPatients/"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 write.csv(results_df, file.path(output_dir, "LR_Scores_AllPatients_AllTimepoints.csv"),

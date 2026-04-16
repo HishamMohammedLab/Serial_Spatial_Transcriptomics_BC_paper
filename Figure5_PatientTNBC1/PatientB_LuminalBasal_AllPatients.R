@@ -8,6 +8,7 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 library(patchwork)
+library(tibble)
 
 # ------------------------------------------------------------------------------
 # Setup

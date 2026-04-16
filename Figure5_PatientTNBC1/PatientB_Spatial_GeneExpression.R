@@ -281,7 +281,7 @@ for(gene in genes_avail) {
   if(!is.null(p_bx1) && !is.null(p_bx4)) {
 
     # Get DE stats for subtitle
-    de_results <- read.csv(file.path("~/Topic_UMAP_Publication/LR_Analysis/PatientB_Analysis/",
+    de_results <- read.csv(file.path("LR_Analysis/PatientB_Analysis/",
                                       "PatientB_DE_results.csv"))
     gene_stats <- de_results %>% filter(Gene == gene)
 
