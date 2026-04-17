@@ -15,7 +15,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Paths
-DATA_PATH = Path("supplementary_input_data/LR_Scores")
+DATA_PATH = Path("supplementary_input_data/Cosmx Protein\\")
 OUTPUT_PATH = Path("Spatial_Lineage")
 OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
 
