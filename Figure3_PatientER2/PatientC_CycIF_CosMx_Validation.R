@@ -39,15 +39,6 @@ cycif_df <- merge(protein_df, coord_df[, .(cell_id, X_um, Y_um, scene)], by = "c
 cat("CycIF cells:", nrow(cycif_df), "\n")
 
 # ============================================================================
-# LOAD CosMx DATA
-# ============================================================================
-
-cosmx_de <- fread(file.path(cosmx_path, "CAF_Subtypes/Final_Figures/Final_DE_Genes_Stats.csv"))
-cosmx_zones <- fread(file.path(cosmx_path, "CAF_Subtypes/Cancer_by_Zone_Bx1vsBx2.csv"))
-
-cat("CosMx DE genes loaded\n")
-
-# ============================================================================
 # VALIDATION 1: CELL TYPE MARKER SPECIFICITY
 # ============================================================================
 
