@@ -11,8 +11,8 @@ DefaultAssay(anno_SO) <- "RNA"
 
 options(future.globals.maxSize = 60*1024^3)
 
-transfer.anchors <- FindTransferAnchors(reference = Ryan_SO, query = SO, dims = 1:20, reference.reduction = "pca")
-predictions <- TransferData(anchorset = transfer.anchors, refdata = Ryan_SO$assigned_celltype, dims = 1:20)
+transfer.anchors <- FindTransferAnchors(reference = anno_SO, query = SO, dims = 1:20, reference.reduction = "pca")
+predictions <- TransferData(anchorset = transfer.anchors, refdata = anno_SO$assigned_celltype, dims = 1:20)
 SO <- AddMetaData(SO, metadata = predictions)
 
 saveRDS(SO, "cosmx_allCells_newAnno.rds")
